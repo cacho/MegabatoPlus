@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4D0DA3516261A6C007846E5 /* spritesMegaman.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D0DA3316261A6C007846E5 /* spritesMegaman.png */; };
+		D4D0DA3616261A6C007846E5 /* tileset_megaman6-tomahawk.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D0DA3416261A6C007846E5 /* tileset_megaman6-tomahawk.png */; };
+		D4D0DA3E16261B47007846E5 /* MegaBato.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D0DA3D16261B47007846E5 /* MegaBato.mm */; };
+		D4D0DA4016262892007846E5 /* spritesMegaman-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D0DA3F16262892007846E5 /* spritesMegaman-hd.png */; };
 		D4FCA1B01625E40800B6CD00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FCA1AF1625E40800B6CD00 /* QuartzCore.framework */; };
 		D4FCA1B21625E40800B6CD00 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FCA1B11625E40800B6CD00 /* OpenGLES.framework */; };
 		D4FCA1B41625E40800B6CD00 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FCA1B31625E40800B6CD00 /* OpenAL.framework */; };
@@ -188,6 +192,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4D0DA3316261A6C007846E5 /* spritesMegaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritesMegaman.png; sourceTree = "<group>"; };
+		D4D0DA3416261A6C007846E5 /* tileset_megaman6-tomahawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tileset_megaman6-tomahawk.png"; sourceTree = "<group>"; };
+		D4D0DA3C16261B47007846E5 /* MegaBato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MegaBato.h; sourceTree = "<group>"; };
+		D4D0DA3D16261B47007846E5 /* MegaBato.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MegaBato.mm; sourceTree = "<group>"; };
+		D4D0DA3F16262892007846E5 /* spritesMegaman-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spritesMegaman-hd.png"; sourceTree = "<group>"; };
 		D4FCA1AB1625E40800B6CD00 /* MegabatoPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegabatoPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FCA1AF1625E40800B6CD00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4FCA1B11625E40800B6CD00 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -579,6 +588,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4D0DA3216261A6C007846E5 /* Graficos */ = {
+			isa = PBXGroup;
+			children = (
+				D4D0DA3F16262892007846E5 /* spritesMegaman-hd.png */,
+				D4D0DA3316261A6C007846E5 /* spritesMegaman.png */,
+				D4D0DA3416261A6C007846E5 /* tileset_megaman6-tomahawk.png */,
+			);
+			path = Graficos;
+			sourceTree = "<group>";
+		};
 		D4FCA1A01625E40700B6CD00 = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +645,8 @@
 				D4FCA1C21625E40800B6CD00 /* Resources */,
 				D4FCA1E01625E40800B6CD00 /* libs */,
 				D4FCA3D71625E40C00B6CD00 /* Supporting Files */,
+				D4D0DA3C16261B47007846E5 /* MegaBato.h */,
+				D4D0DA3D16261B47007846E5 /* MegaBato.mm */,
 			);
 			path = MegabatoPlus;
 			sourceTree = "<group>";
@@ -633,6 +654,7 @@
 		D4FCA1C21625E40800B6CD00 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4D0DA3216261A6C007846E5 /* Graficos */,
 				D4FCA1C31625E40800B6CD00 /* Default.png */,
 				D4FCA1C51625E40800B6CD00 /* Default@2x.png */,
 				D4FCA1C71625E40800B6CD00 /* Default-568h@2x.png */,
@@ -1229,6 +1251,9 @@
 				D4FCA1DF1625E40800B6CD00 /* iTunesArtwork in Resources */,
 				D4FCA3281625E40A00B6CD00 /* ChangeLog in Resources */,
 				D4FCA3E81625E40C00B6CD00 /* blocks.png in Resources */,
+				D4D0DA3516261A6C007846E5 /* spritesMegaman.png in Resources */,
+				D4D0DA3616261A6C007846E5 /* tileset_megaman6-tomahawk.png in Resources */,
+				D4D0DA4016262892007846E5 /* spritesMegaman-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1392,6 +1417,7 @@
 				D4FCA3E01625E40C00B6CD00 /* HelloWorldLayer.mm in Sources */,
 				D4FCA3E31625E40C00B6CD00 /* IntroLayer.mm in Sources */,
 				D4FCA3E61625E40C00B6CD00 /* GLES-Render.mm in Sources */,
+				D4D0DA3E16261B47007846E5 /* MegaBato.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,7 +1439,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1432,7 +1458,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1507,6 +1533,7 @@
 				D4FCA3ED1625E40C00B6CD00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,7 +27,7 @@ enum {
 @interface HelloWorldLayer()
 -(void) initPhysics;
 -(void) addNewSpriteAtPosition:(CGPoint)p;
-
+-(void) addPlayerToStage:(CGPoint)p;
 @end
 
 @implementation HelloWorldLayer
@@ -204,17 +204,21 @@ enum {
 
 -(void) addPlayerToStage:(CGPoint)p
 {
-	CCLOG(@"Add sprite %0.2f x %02.f",p.x,p.y);
+	CCLOG(@"Agregando jugador en: %0.2f x %02.f",p.x,p.y);
 	// Define the dynamic body.
 	//Set up a 1m squared box in the physics world
+    MegaBato *player= [[MegaBato alloc]init];
+    
 	b2BodyDef bodyDef;
-	bodyDef.type = b2_dynamicBody;
+    bodyDef.type = b2_dynamicBody;
 	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
+    bodyDef.userData=player;
 	b2Body *body = world->CreateBody(&bodyDef);
 	
 	// Define another box shape for our dynamic body.
 	b2PolygonShape dynamicBox;
 	dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+    
 	
 	// Define the dynamic body fixture.
 	b2FixtureDef fixtureDef;
@@ -230,17 +234,7 @@ enum {
 	//just randomly picking one of the images
 	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
 	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
-    
-   
-    MegaBato *player= [[MegaBato alloc]init];
-    //player.position = ccp(32, s.height/2);
-    
-    
-	//CCPhysicsSprite *sprite = [CCPhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32 * idx,32 * idy,32,32)];
-    
-   // CCPhysicsSprite *sprite = [[CCPhysicsSprite alloc]init];
-    
-    //sprite = player;
+ 
     
 	[parent addChild:player];
 	

@@ -63,10 +63,10 @@ enum {
 		// create reset button
 		//[self createMenu];
         
-        //MegaBato *player= [[MegaBato alloc]init];
+        MegaBato *player= [[MegaBato alloc]init];
         //player.position = ccp(32, s.height/2);
         
-        //[self addChild:player];
+        [self addChild:player];
         
         
         
@@ -212,12 +212,12 @@ enum {
 	b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
 	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
-    bodyDef.userData=player;
 	b2Body *body = world->CreateBody(&bodyDef);
 	
 	// Define another box shape for our dynamic body.
 	b2PolygonShape dynamicBox;
 	dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+   
     
 	
 	// Define the dynamic body fixture.
@@ -230,17 +230,11 @@ enum {
     
 	CCNode *parent = [self getChildByTag:kTagParentNode];
 	
-	//We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
-	//just randomly picking one of the images
-	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
-	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
- 
-    
 	[parent addChild:player];
 	
-	[player setPTMRatio:PTM_RATIO];
-	[player setBody:body];
-	[player setPosition: ccp( p.x, p.y)];
+	//[player setPTMRatio:PTM_RATIO];
+	//[player setBody:body];
+	//[player setPosition: ccp( p.x, p.y)];
     
 }
 
